@@ -89,21 +89,4 @@ class Index
         $next_data = empty($next_data)?(object)([]):$next_data[0];
         return json(['article' => $article[0], 'prev' =>$prev_data , 'next' => $next_data]);
     }
-    public function getSomething()
-    {
-        $class_id = 1;
-        $user_id = 2;
-        $content_id = 12;
-        $prev_data = Db::table('blog_content')
-            ->where("id<$content_id AND class_id=$class_id AND user_id=$user_id")
-            ->order('id desc')
-            ->limit(1)
-            ->select();
-        $next_data = Db::table('blog_content')
-            ->where("id>$content_id AND class_id=$class_id AND user_id=$user_id")
-            ->order('id')
-            ->limit(1)
-            ->select();
-        return json(['prev' => $prev_data, 'next' => $next_data]);
-    }
 }

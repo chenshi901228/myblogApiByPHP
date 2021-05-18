@@ -21,7 +21,6 @@
 // ];
 use think\Route;
 
-Route::rule("homePageInit","index/Index/homePageInit",'POST');
-Route::rule("getClassItem","index/Index/getClassItem",'POST');
-Route::rule("getArticle","index/Index/getArticle",'POST');
-Route::rule("getSomething","index/Index/getSomething",'POST');
+Route::rule("homePageInit","index/Index/homePageInit",'POST'); //首页初始化
+Route::rule("getClassItem","index/Index/getClassItem",'POST');  //获取分类文章列表
+Route::rule("getArticle","index/Index/getArticle",'POST');  //获取文章内容详情
