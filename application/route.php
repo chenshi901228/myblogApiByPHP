@@ -21,6 +21,12 @@
 // ];
 use think\Route;
 
+// 测试
+Route::rule("test","index/Test/read",'POST'); 
+
+
+
 Route::rule("homePageInit","index/Index/homePageInit",'POST'); //首页初始化
 Route::rule("getClassItem","index/Index/getClassItem",'POST');  //获取分类文章列表
 Route::rule("getArticle","index/Index/getArticle",'POST');  //获取文章内容详情
+
